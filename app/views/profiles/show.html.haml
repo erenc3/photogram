@@ -9,7 +9,7 @@
           = @user.user_name
         %span
           - if @user == current_user
-            = link_to 'Edit Profile', edit_profile_path(@user.user_name),
+            = link_to 'Profili güncelle', edit_profile_path(@user.user_name),
                                       class: 'btn edit-button'
       %p.profile-bio
         = @user.bio

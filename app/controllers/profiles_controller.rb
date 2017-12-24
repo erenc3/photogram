@@ -12,7 +12,7 @@ class ProfilesController < ApplicationController
 
   def update
     if @user.update(profile_params)
-      flash[:success] = 'Your profile has been updated.'
+      flash[:success] = 'Profilin güncellendi.'
       redirect_to profile_path(@user.user_name)
     else
       @user.errors.full_messages
@@ -29,7 +29,7 @@ class ProfilesController < ApplicationController
 
   def owned_profile
     unless current_user == @user
-      flash[:alert] = "That profile doesn't belong to you!"
+      flash[:alert] = "Profil sana ait değil!"
       redirect_to root_path
     end
   end

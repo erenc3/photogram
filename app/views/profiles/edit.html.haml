@@ -6,7 +6,7 @@
           .row
             .col-md-12
               .form-group.text-center
-                %h4 Change your profile image:
+                %h4 Profil resmini değiştir:
                 .img-circle.avatar-image
                   = profile_avatar_select(@user)
                 = f.input :avatar, label: false,
@@ -14,7 +14,7 @@
           .row
             .col-md-12
               .form-group.text-center
-                %h4 Update your bio:
+                %h4 Hobilerini güncelle:
                 = f.input :bio, label: false, input_html: { rows: 4 }
           .form-group.text-center
-            = f.button :submit, 'Update Profile', class: 'btn btn-success'
+            = f.button :submit, 'Profili güncelle', class: 'btn btn-success'
